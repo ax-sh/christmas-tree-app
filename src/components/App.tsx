@@ -1,5 +1,6 @@
+// ts-nocheck
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
+// import * as THREE from "three";
 import "./App.scss";
 import { Bounds, Center, Html, OrbitControls, Sphere } from "@react-three/drei";
 import React from "react";
@@ -33,9 +34,9 @@ const Canv = ({ children, ...props }: any) => {
 
 const Scene = () => {
   const { turns, heightStep, radius, objPerTurn } = useControls({
-    radius: { min: 1, max: 10, value: 2 },
-    turns: { min: 1, max: 10, value: 5, step: 1 },
-    objPerTurn: { min: 1, max: 100, value: 30 },
+    radius: { min: 1, max: 10, value: 3 },
+    turns: { min: 1, max: 10, value: 6, step: 1 },
+    objPerTurn: { min: 1, max: 100, value: 40 },
     heightStep: { min: 0, max: 1, step: 0.001, value: 1 },
   });
   const angleStep = React.useMemo(
@@ -61,6 +62,7 @@ const Scene = () => {
 
           return (
             <mesh
+              key={_}
               // geometry={geom}
               position={[x, y, z]}
               rotation-y={-angleStep * i}
@@ -136,8 +138,13 @@ function Bloom({ children }) {
 const Tree = () => {
   return (
     <group>
-      <OrbitControls autoRotate autoRotateSpeed={3} />
-      <Bounds fit>
+      <OrbitControls
+        autoRotate
+        autoRotateSpeed={-3}
+        // minDistance={7}
+        // maxDistance={10}
+      />
+      <Bounds fit margin={1}>
         <Center>
           <Bloom>
             <Scene />
