@@ -116,12 +116,12 @@ function Bloom({ children }) {
   const [scene, setScene] = React.useState();
   const composer = React.useRef();
   // @ts-ignore
-    React.useEffect(
+  React.useEffect(
     () => void scene && composer.current.setSize(size.width, size.height),
     [size]
   );
   // @ts-ignore
-    useFrame(() => scene && composer.current.render(), 1);
+  useFrame(() => scene && composer.current.render(), 1);
   return (
     <>
       <scene ref={setScene}>{children}</scene>
@@ -136,7 +136,7 @@ function Bloom({ children }) {
 const Tree = () => {
   return (
     <group>
-      <OrbitControls autoRotate autoRotateSpeed={3}/>
+      <OrbitControls autoRotate autoRotateSpeed={3} />
       <Bounds fit>
         <Center>
           <Bloom>
@@ -155,7 +155,7 @@ function App() {
       </Canv>
       <h1>
         Created by{" "}
-        <a href={"https://twitter.com/ax___sh"} target={"_blank"}>
+        <a href={"https://www.linkedin.com/in/axmin/"} target={"_blank"}>
           ax-sh
         </a>
       </h1>
