@@ -1,4 +1,4 @@
-// ts-nocheck
+// @ts-nocheck
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 // import * as THREE from "three";
 import "./App.scss";
