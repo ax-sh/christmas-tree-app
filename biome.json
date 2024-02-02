@@ -8,5 +8,14 @@
 		"rules": {
 			"recommended": true
 		}
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"ignore": [
+			".vitest",
+			"node_modules",
+			"dist"
+		]
 	}
+
 }
