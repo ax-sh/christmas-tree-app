@@ -41,11 +41,11 @@ const Scene = () => {
   });
   const angleStep = React.useMemo(
     () => (Math.PI * 2) / objPerTurn,
-    [objPerTurn]
+    [objPerTurn],
   );
   const items = React.useMemo(
     () => [...Array(turns * objPerTurn).keys()] ?? [],
-    [turns, objPerTurn]
+    [turns, objPerTurn],
   );
   return (
     <scene>
@@ -120,7 +120,7 @@ function Bloom({ children }) {
   // @ts-ignore
   React.useEffect(
     () => void scene && composer.current.setSize(size.width, size.height),
-    [size]
+    [size],
   );
   // @ts-ignore
   useFrame(() => scene && composer.current.render(), 1);

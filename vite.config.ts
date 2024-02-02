@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { qrcode } from 'vite-plugin-qrcode';
-
+import { qrcode } from "vite-plugin-qrcode";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),
-    qrcode() // only applies in dev mode
-    ],
+  plugins: [
+    react(),
+    qrcode(), // only applies in dev mode
+  ],
   base: "/christmas-tree-app/",
 });
