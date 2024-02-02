@@ -1,10 +1,8 @@
-// @ts-nocheck
-import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-// import * as THREE from "three";
-import "./App.scss";
 import { Bounds, Center, Html, OrbitControls, Sphere } from "@react-three/drei";
-import React from "react";
+// @ts-nocheck
+import { Canvas, Props, extend, useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
+import React from "react";
 // import {
 //   EffectComposer,
 //   DepthOfField,
@@ -15,10 +13,12 @@ import { useControls } from "leva";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
+// import * as THREE from "three";
+import "./App.scss";
 
 extend({ EffectComposer, RenderPass, UnrealBloomPass });
 
-const Canv = ({ children, ...props }: any) => {
+const Canv = ({ children, ...props }: Props) => {
   return (
     <Canvas
       gl={{ antialias: true }}
@@ -32,25 +32,29 @@ const Canv = ({ children, ...props }: any) => {
 
 // const geom = new THREE.BoxBufferGeometry(2, 3, 0.1);
 
-const Scene = () => {
-  const { turns, heightStep, radius, objPerTurn } = useControls({
+function useSceneControls() {
+  return useControls({
     radius: { min: 1, max: 10, value: 3 },
     turns: { min: 1, max: 10, value: 6, step: 1 },
     objPerTurn: { min: 1, max: 100, value: 40 },
     heightStep: { min: 0, max: 1, step: 0.001, value: 1 },
   });
+}
+
+const Scene = () => {
+  const { turns, heightStep, radius, objPerTurn } = useSceneControls();
   const angleStep = React.useMemo(
     () => (Math.PI * 2) / objPerTurn,
     [objPerTurn],
   );
   const items = React.useMemo(
-    () => [...Array(turns * objPerTurn).keys()] ?? [],
+    () => [...Array(turns * objPerTurn).keys()] || [],
     [turns, objPerTurn],
   );
   return (
     <scene>
       <group>
-        {items.map((i, _, m) => {
+        {items.map((i, key, m) => {
           const rad = (m.length - i) * 0.5;
           // const rad = radius;
 
@@ -62,7 +66,8 @@ const Scene = () => {
 
           return (
             <mesh
-              key={_}
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              key={key}
               // geometry={geom}
               position={[x, y, z]}
               rotation-y={-angleStep * i}
@@ -116,10 +121,9 @@ const Scene = () => {
 function Bloom({ children }) {
   const { gl, camera, size } = useThree();
   const [scene, setScene] = React.useState();
-  const composer = React.useRef();
-  // @ts-ignore
+  const composer = React.useRef(null);
   React.useEffect(
-    () => void scene && composer.current.setSize(size.width, size.height),
+    () => void scene && composer.current?.setSize(size.width, size.height),
     [size],
   );
   // @ts-ignore
@@ -162,6 +166,7 @@ function App() {
       </Canv>
       <h1>
         Created by{" "}
+        {/* biome-ignore lint/a11y/noBlankTarget: <explanation> */}
         <a href={"https://www.linkedin.com/in/axmin/"} target={"_blank"}>
           ax-sh
         </a>
