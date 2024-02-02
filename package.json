@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "oxlint"
   },
   "dependencies": {
     "@react-three/drei": "^9.97.0",
@@ -25,7 +26,9 @@
     "@types/react": "^18.2.51",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
+    "eslint-plugin-oxlint": "^0.2.3",
     "gh-pages": "^6.1.1",
+    "oxlint": "^0.2.6",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-qrcode": "^0.2.3"

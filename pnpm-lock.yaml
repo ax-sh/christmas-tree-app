@@ -43,9 +43,15 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: ^4.2.1
     version: 4.2.1(vite@5.0.12)
+  eslint-plugin-oxlint:
+    specifier: ^0.2.3
+    version: 0.2.3
   gh-pages:
     specifier: ^6.1.1
     version: 6.1.1
+  oxlint:
+    specifier: ^0.2.6
+    version: 0.2.6
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -572,6 +578,70 @@ packages:
   /@mediapipe/tasks-vision@0.10.8:
     resolution: {integrity: sha512-Rp7ll8BHrKB3wXaRFKhrltwZl1CiXGdibPxuWXvqGnKTnv8fqa/nvftYNuSbf+pbJWKYCXdBtYTITdAUTGGh0Q==}
     dev: false
+
+  /@oxlint/darwin-arm64@0.2.6:
+    resolution: {integrity: sha512-hUVo2oBnicVYbNiTnaYdXKHDsg9wAnnHYfw9HOM3lsqAXkkmUo9DI3spaYa6TMWUVJ57iTtcR7RXquJ7nVXijQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/darwin-x64@0.2.6:
+    resolution: {integrity: sha512-DBdoJhtCos8sumzlFuNt+vmKWu2NEah7bI2EtnZi+6VGJKJpf+T6oA/RADkmDZN2msRrppznCTEewgQRA/LkfQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/linux-arm64-gnu@0.2.6:
+    resolution: {integrity: sha512-1uWKjDsVNpGQir8dyA5RymU4FwcJUD4GUBBPDeN7xLgeVnIGXcNWzZ4GSsHsSAGLHgA9JJKQc8iQY+uZpTYRAw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/linux-arm64-musl@0.2.6:
+    resolution: {integrity: sha512-Sjq9thO2roo2dF0IVk2BQ1NiK0pAhzaJPaY8LdVhWhJy5PZya+UgRxhqb7dMckRq0HSNww3MTqaOD48wLeKJfg==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/linux-x64-gnu@0.2.6:
+    resolution: {integrity: sha512-iBwKXalx1l5/WpCDndJ+VQK3sbLcjZb+XcA2J5sJUfUlK6ua9+rf5bd6EMeVAb1fywlQPBkBya7kPDuJ43PPtw==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/linux-x64-musl@0.2.6:
+    resolution: {integrity: sha512-aZDwMqS4lMPaWzlgA4N9Mw5W/uPQoOh/aCrnsjkub4P9xVoOA1KHoaA+gskdnRkZp2tgiUBOpqLs6tY6WPfqOA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/win32-arm64@0.2.6:
+    resolution: {integrity: sha512-kpA0v76i+qU8xLHu74KH1HaSsKdZeckf7gk1NKTDpAQklUoeae9lO0NKWuszpfSb1l1tvyRbqwWU94GfGMuCtA==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxlint/win32-x64@0.2.6:
+    resolution: {integrity: sha512-Sh4ieKl5O6EWtwSA2pL5Pr7ixaMXiIiXT310qMBicboq/6QfAujCH7pN28pxtqDxbSckE1QiSZfAafuyddAKrQ==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@radix-ui/primitive@1.0.1:
     resolution: {integrity: sha512-yQ8oGX2GVsEYMWGxcovu1uGWPCxV5BFfeeYxqPmuAzUyLT9qmaMXSAhXpb0WrspIeqYzdJpkh2vHModJPgRIaw==}
@@ -1540,6 +1610,10 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: true
 
+  /eslint-plugin-oxlint@0.2.3:
+    resolution: {integrity: sha512-Grdd+CmeyDxJAar251bh4n9CYZh/3uc0wIc7rrtaRgq7wFibM2oikpzGvA5QDM7/Yvnw/brajWGbIJlLK7pBGA==}
+    dev: true
+
   /extend-shallow@2.0.1:
     resolution: {integrity: sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug==}
     engines: {node: '>=0.10.0'}
@@ -1924,6 +1998,21 @@ packages:
       string.prototype.codepointat: 0.2.1
       tiny-inflate: 1.0.3
     dev: false
+
+  /oxlint@0.2.6:
+    resolution: {integrity: sha512-oT4Stz2Gr/9cWXtrSZSQ0g3DCd1BWqTejcXqmu6dU7TT/8JMa7rJr1liW632aJY/Ean9sGrFhwXXCCCyM29NlA==}
+    engines: {node: '>=14.*'}
+    hasBin: true
+    optionalDependencies:
+      '@oxlint/darwin-arm64': 0.2.6
+      '@oxlint/darwin-x64': 0.2.6
+      '@oxlint/linux-arm64-gnu': 0.2.6
+      '@oxlint/linux-arm64-musl': 0.2.6
+      '@oxlint/linux-x64-gnu': 0.2.6
+      '@oxlint/linux-x64-musl': 0.2.6
+      '@oxlint/win32-arm64': 0.2.6
+      '@oxlint/win32-x64': 0.2.6
+    dev: true
 
   /p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
