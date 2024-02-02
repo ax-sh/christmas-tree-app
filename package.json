@@ -10,22 +10,22 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@react-three/drei": "^8.3.1",
+    "@react-three/drei": "^9.97.0",
     "@react-three/fiber": "^7.0.24",
     "@react-three/postprocessing": "^2.0.5",
     "@types/three": "^0.135.0",
-    "leva": "^0.9.18",
-    "sass": "^1.45.0",
+    "leva": "^0.9.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.70.0",
     "three": "^0.135.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@vitejs/plugin-react": "^1.0.7",
-    "gh-pages": "^3.2.3",
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2"
+    "@types/react": "^18.2.51",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
   }
 }
