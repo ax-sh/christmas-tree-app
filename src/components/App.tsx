@@ -1,4 +1,4 @@
-import { Bounds, Center, Html, OrbitControls, Sphere } from "@react-three/drei";
+import { Bounds, Center,  OrbitControls } from "@react-three/drei";
 // @ts-nocheck
 import { Canvas, Props, extend, useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
