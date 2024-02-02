@@ -1,5 +1,5 @@
-import { Bounds, Center,  OrbitControls } from "@react-three/drei";
-// @ts-nocheck
+import { Bounds, Center, OrbitControls } from "@react-three/drei";
+
 import { Canvas, Props, extend, useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 import React from "react";
@@ -120,19 +120,20 @@ const Scene = () => {
 
 function Bloom({ children }) {
   const { gl, camera, size } = useThree();
-  const [scene, setScene] = React.useState();
+  const [scene, setScene] = React.useState<typeof scene>(null);
   const composer = React.useRef(null);
   React.useEffect(
     () => void scene && composer.current?.setSize(size.width, size.height),
-    [size],
+    [size, scene],
   );
-  // @ts-ignore
   useFrame(() => scene && composer.current.render(), 1);
+
   return (
     <>
       <scene ref={setScene}>{children}</scene>
       <effectComposer ref={composer} args={[gl]}>
         <renderPass attachArray="passes" scene={scene} camera={camera} />
+        {/*// @ts-ignore*/}
         <unrealBloomPass attachArray="passes" args={[undefined, 1.5, 1, 0]} />
       </effectComposer>
     </>
@@ -165,8 +166,7 @@ function App() {
         <Tree />
       </Studio>
       <h1>
-        Created by{" "}
-        {/* biome-ignore lint/a11y/noBlankTarget: <explanation> */}
+        Created by {/* biome-ignore lint/a11y/noBlankTarget: <explanation> */}
         <a href={"https://www.linkedin.com/in/axmin/"} target={"_blank"}>
           ax-sh
         </a>
