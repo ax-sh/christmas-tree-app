@@ -18,7 +18,7 @@ import "./App.scss";
 
 extend({ EffectComposer, RenderPass, UnrealBloomPass });
 
-const Canv = ({ children, ...props }: Props) => {
+const Studio = ({ children, ...props }: Props) => {
   return (
     <Canvas
       gl={{ antialias: true }}
@@ -161,9 +161,9 @@ const Tree = () => {
 function App() {
   return (
     <div className={"App"}>
-      <Canv>
+      <Studio>
         <Tree />
-      </Canv>
+      </Studio>
       <h1>
         Created by{" "}
         {/* biome-ignore lint/a11y/noBlankTarget: <explanation> */}
