@@ -56,7 +56,7 @@ const Scene = () => {
       <group>
         {items.map((i, key, m) => {
           const rad = (m.length - i) * 0.5;
-          // const rad = radius;
+
 
           const [x, y, z] = [
             Math.cos(angleStep * i) * rad,
