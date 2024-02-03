@@ -3,7 +3,7 @@
 
 ### [WEBSITE](https://ax-sh.github.io/christmas-tree-app/)
 
-## Tech Stack used 
+## Tech Stack 
 - @react-three/drei
 - @react-three/fiber
 - leva
