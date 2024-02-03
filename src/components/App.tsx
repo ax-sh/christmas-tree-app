@@ -57,12 +57,12 @@ const Scene = () => {
         {items.map((i, key, m) => {
           const rad = (m.length - i) * 0.5;
 
-
           const [x, y, z] = [
             Math.cos(angleStep * i) * rad,
             heightStep * i,
             Math.sin(angleStep * i) * rad,
           ];
+          const randomHEXColor = Math.random() * 0x888888 + 0x888888;
 
           return (
             <mesh
@@ -73,11 +73,7 @@ const Scene = () => {
               rotation-y={-angleStep * i}
             >
               <sphereBufferGeometry attach={"geometry"} args={[radius]} />
-
-              <meshBasicMaterial
-                attach={"material"}
-                color={Math.random() * 0x888888 + 0x888888}
-              />
+              <meshBasicMaterial attach={"material"} color={randomHEXColor} />
             </mesh>
           );
         })}
