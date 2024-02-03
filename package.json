@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ax-sh.github.io//christmas-tree-app",
+  "homepage": "https://ax-sh.github.io/christmas-tree-app",
   "name": "christmas-tree-app",
   "version": "0.0.0",
   "scripts": {
@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist",
+    "postdeploy": "echo https://ax-sh.github.io/christmas-tree-app",
     "preinstall": "npx only-allow pnpm",
     "lint": "oxlint",
     "format": "biome format ."
