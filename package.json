@@ -6,10 +6,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "pnpm build",
+    "predeploy": "bun build",
     "deploy": "gh-pages -d dist",
     "postdeploy": "echo https://ax-sh.github.io/christmas-tree-app",
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "bunx only-allow bun",
     "lint": "oxlint",
     "format": "biome format ."
   },
