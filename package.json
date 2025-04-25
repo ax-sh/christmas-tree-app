@@ -11,7 +11,8 @@
     "postdeploy": "echo https://ax-sh.github.io/christmas-tree-app",
     "preinstall": "bunx only-allow bun",
     "lint": "oxlint",
-    "format": "biome format ."
+    "format": "biome format .",
+    "upp": "bunx npm-check-updates -i"
   },
   "dependencies": {
     "@react-three/drei": "^9.97.0",
