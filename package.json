@@ -18,13 +18,13 @@
     "@react-three/drei": "^9.97.0",
     "@react-three/fiber": "^7.0.24",
     "@react-three/postprocessing": "^2.15.13",
-    "@types/three": "^0.135.0",
+    "@types/three": "^0.176.0",
     "leva": "^0.9.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
     "sass": "^1.87.0",
-    "three": "0.149.0"
+    "three": "0.176.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
