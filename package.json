@@ -19,7 +19,7 @@
     "@react-three/fiber": "^7.0.24",
     "@react-three/postprocessing": "^2.15.13",
     "@types/three": "^0.135.0",
-    "leva": "^0.9.35",
+    "leva": "^0.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
