@@ -31,9 +31,9 @@
     "@types/react": "^18.2.51",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.4.1",
-    "eslint-plugin-oxlint": "^0.2.3",
-    "gh-pages": "^6.1.1",
-    "oxlint": "^0.2.6",
+    "eslint-plugin-oxlint": "^0.16.9",
+    "gh-pages": "^6.3.0",
+    "oxlint": "^0.16.9",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-qrcode": "^0.2.4"
