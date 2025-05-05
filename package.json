@@ -24,7 +24,7 @@
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
     "sass": "^1.70.0",
-    "three": "^0.135.0"
+    "three": "0.149.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
