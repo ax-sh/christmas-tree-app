@@ -1,6 +1,6 @@
 import { Bounds, Center, OrbitControls } from "@react-three/drei";
 
-import { Canvas, Props, extend, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, extend, Props, useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 import React from "react";
 // import {
@@ -48,7 +48,7 @@ const Scene = () => {
     [objPerTurn],
   );
   const items = React.useMemo(
-    () => [...Array(turns * objPerTurn).keys()] || [],
+    () => [...Array(turns * objPerTurn).keys()],
     [turns, objPerTurn],
   );
   return (
